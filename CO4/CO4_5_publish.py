@@ -14,10 +14,10 @@ class book(publisher):
         print("Author:",self.author)
         
 class python(book):
-    def __init__(self,name,price,no_of_page):
+    def __init__(self,price,no_of_page,name):
         self.price=price
         self.no_of_page=no_of_page
-        publisher.__init__(self,name)
+        super().__init__(name)
     def display(self):
         print("Price:",self.price)
         print("No Of Pages:",self.no_of_page)
